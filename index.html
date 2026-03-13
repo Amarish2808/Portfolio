@@ -112,14 +112,14 @@
 
   /* ── HERO ── */
   #hero {
-    min-height: 100svh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    padding: 100px 40px 60px;
+    padding: 120px 40px 80px;
     gap: 60px;
     max-width: 1200px;
     margin: 0 auto;
+    min-height: calc(100vh - 0px);
   }
 
   .hero-text { }
@@ -179,19 +179,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
   }
 
   .photo-frame {
     position: relative;
     width: 320px;
     height: 400px;
+    margin-right: 20px;
+    margin-bottom: 20px;
   }
 
   .photo-frame::before {
     content: '';
     position: absolute;
-    top: 16px; left: 16px;
-    right: -16px; bottom: -16px;
+    top: 16px;
+    left: 16px;
+    width: 100%;
+    height: 100%;
     border: 1px solid var(--light-gray);
     z-index: 0;
   }
@@ -588,8 +593,9 @@
 
     #hero {
       grid-template-columns: 1fr;
-      padding: 100px 24px 60px;
+      padding: 90px 24px 60px;
       gap: 40px;
+      min-height: unset;
       text-align: center;
     }
 
@@ -827,9 +833,9 @@
         <span class="contact-label">Phone</span>
         <span class="contact-value">+91 9498010421</span>
       </a>
-      <a class="contact-item" href="mailto:amarishavinodh2002@gmail.com">
+      <a class="contact-item" href="/cdn-cgi/l/email-protection#8beae6eaf9e2f8e3eafde2e5e4efe3b9bbbbb9cbece6eae2e7a5e8e4e6">
         <span class="contact-label">Email</span>
-        <span class="contact-value">amarishavinodh2002@gmail.com</span>
+        <span class="contact-value"><span class="__cf_email__" data-cfemail="4f2e222e3d263c272e392621202b277d7f7f7d0f28222e2623612c2022">[email&#160;protected]</span></span>
       </a>
       <a class="contact-item" href="https://linkedin.com/in/amarish-a-vinodh-4113702b3" target="_blank">
         <span class="contact-label">LinkedIn</span>
@@ -845,7 +851,7 @@
 
 <footer>© 2025 Amarish A Vinodh &nbsp;·&nbsp; Built with purpose</footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
@@ -857,16 +863,4 @@
 
   // Trigger hero immediately
   window.addEventListener('load', () => {
-    document.querySelectorAll('#hero .reveal').forEach(el => el.classList.add('visible'));
-  });
-
-  // Mobile menu
-  function toggleMenu() {
-    document.getElementById('mobileMenu').classList.toggle('open');
-  }
-  function closeMenu() {
-    document.getElementById('mobileMenu').classList.remove('open');
-  }
-</script>
-</body>
-</html>
+    document.querySelectorAll('#hero .reveal').forEach(el => el.classList.a
